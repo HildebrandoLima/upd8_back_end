@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domains\Traits\GenerateData;
+namespace App\Domain\Traits\GenerateData;
 
 trait GenerateCPF
 {

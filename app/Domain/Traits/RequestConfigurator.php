@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domains\Traits;
+namespace App\Domain\Traits;
 
-use App\Support\Utils\Pagination\Interface\IPagination;
+use App\Support\Utils\Paginator\Interface\IPagination;
 use App\Support\Utils\Params\Interface\ISearch;
 use Illuminate\Http\Request;
 

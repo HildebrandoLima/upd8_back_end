@@ -17,6 +17,7 @@ return new class extends Migration
             $table->char('cpf', 14)->unique()->notnull();
             $table->enum('sex', ['M', 'F']);
             $table->string('address', 255)->notnull();
+            $table->date('date_birth')->notnull();
             $table->foreignId('city_id')->constrained('city')->notnull();
             $table->timestamps();
         });

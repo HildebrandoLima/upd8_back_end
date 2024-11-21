@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domains\Traits\Dtos;
+namespace App\Domain\Traits\Dtos;
 
 trait AutoMapper
 {

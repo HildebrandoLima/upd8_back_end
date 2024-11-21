@@ -21,4 +21,9 @@ class City extends Model
     {
         return $this->hasMany(Client::class, 'city_id');
     }
+
+    public function representative(): HasMany
+    {
+        return $this->hasMany(Representative::class, 'city_id');
+    }
 }

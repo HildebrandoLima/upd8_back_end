@@ -20,7 +20,8 @@ class RepresentativeFactory extends Factory
     {
         return [
             'name' => Str::random(20),
-            'cpf' => Str::random(14),
+            'cnpj' => Str::random(18),
+            'address' => Str::random(50),
             'city_id' => City::factory()->createOne()->id,
         ];
     }

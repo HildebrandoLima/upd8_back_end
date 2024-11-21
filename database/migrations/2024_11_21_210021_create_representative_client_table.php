@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('representative', function (Blueprint $table) {
+        Schema::create('representative_client', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('name', 255)->unique()->notnull();
-            $table->char('cnpj', 18)->unique()->notnull();
-            $table->string('address', 255)->notnull();
-            $table->foreignId('city_id')->constrained('city')->notnull();
+            $table->foreignId('representative_id')->constrained('representative')->notnull();
+            $table->foreignId('client_id')->constrained('client')->notnull();
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('representative');
+        Schema::dropIfExists('representative_client');
     }
 };

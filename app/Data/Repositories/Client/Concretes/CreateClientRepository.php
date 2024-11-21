@@ -28,7 +28,7 @@ class CreateClientRepository implements ICreateClientRepository
             return true;
         } catch (Exception $e) {
             DB::rollBack();
-            Log::error('Erro ao realizar cadastro de usuário:', ['exception' => $e->getMessage()]);
+            Log::error('Erro ao realizar cadastro de cliente:', ['exception' => $e->getMessage()]);
 			return false;
         }
     }

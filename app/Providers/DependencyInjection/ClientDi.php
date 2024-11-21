@@ -6,21 +6,25 @@ use App\Data\Repositories\Client\Concretes\CreateClientRepository;
 use App\Data\Repositories\Client\Concretes\DeleteClientByIdRepository;
 use App\Data\Repositories\Client\Concretes\ListAllClientRepository;
 use App\Data\Repositories\Client\Concretes\ListClientByIdRepository;
+use App\Data\Repositories\Client\Concretes\UpdateClientRepository;
 
 use App\Data\Repositories\Client\Interfaces\ICreateClientRepository;
 use App\Data\Repositories\Client\Interfaces\IDeleteClientByIdRepository;
 use App\Data\Repositories\Client\Interfaces\IListAllClientRepository;
 use App\Data\Repositories\Client\Interfaces\IListClientByIdRepository;
+use App\Data\Repositories\Client\Interfaces\IUpdateClientRepository;
 
 use App\Domain\Services\Client\Concretes\ListAllClientService;
 use App\Domain\Services\Client\Concretes\CreateClientService;
 use App\Domain\Services\Client\Concretes\DeleteClientByIdService;
 use App\Domain\Services\Client\Concretes\ListClientByIdService;
+use App\Domain\Services\Client\Concretes\UpdateClientService;
 
 use App\Domain\Services\Client\Interfaces\ICreateClientService;
 use App\Domain\Services\Client\Interfaces\IDeleteClientByIdService;
 use App\Domain\Services\Client\Interfaces\IListAllClientService;
 use App\Domain\Services\Client\Interfaces\IListClientByIdService;
+use App\Domain\Services\Client\Interfaces\IUpdateClientService;
 
 class ClientDi extends DependencyInjection
 {
@@ -30,7 +34,8 @@ class ClientDi extends DependencyInjection
             [ICreateClientService::class, CreateClientService::class],
             [IDeleteClientByIdService::class, DeleteClientByIdService::class],
             [IListAllClientService::class, ListAllClientService::class],
-            [IListClientByIdService::class, ListClientByIdService::class]
+            [IListClientByIdService::class, ListClientByIdService::class],
+            [IUpdateClientService::class, UpdateClientService::class]
         ];
     }
 
@@ -40,7 +45,8 @@ class ClientDi extends DependencyInjection
             [ICreateClientRepository::class, CreateClientRepository::class],
             [IDeleteClientByIdRepository::class, DeleteClientByIdRepository::class],
             [IListAllClientRepository::class, ListAllClientRepository::class],
-            [IListClientByIdRepository::class, ListClientByIdRepository::class]
+            [IListClientByIdRepository::class, ListClientByIdRepository::class],
+            [IUpdateClientRepository::class, UpdateClientRepository::class]
         ];
     }
 }

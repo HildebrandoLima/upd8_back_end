@@ -31,7 +31,7 @@ class CreateClientRequest extends BaseRequest
     public function messages(): array
     {
         return [
-            'sex.in' => 'Gênero: ' . DefaultErrorMessages::NOT_FOUND,
+            'sex.in' => DefaultErrorMessages::NOT_FOUND,
 			'date_birth.before' => 'Data de nascimento não pode ser hoje ou uma data futura.',
 
             'name.unique' => DefaultErrorMessages::ALREADY_EXISTING,

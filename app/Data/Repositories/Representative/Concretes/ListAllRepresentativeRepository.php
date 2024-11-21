@@ -9,6 +9,7 @@ use App\Models\Representative;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
 
 class ListAllRepresentativeRepository implements IListAllRepresentativeRepository
 {
@@ -20,14 +21,18 @@ class ListAllRepresentativeRepository implements IListAllRepresentativeRepositor
     {
         $this->setRequest($request);
         $this->queryBuilder();
-        return $this->query->paginate(10);
+        return Cache::remember('clients', 60, function() {
+            return $this->query->paginate(10);
+        });
     }
 
     public function noPagination(RepresentativeRequest $request): Collection
     {
         $this->setRequest($request);
         $this->queryBuilder();
-        return $this->query->get();
+        return Cache::remember('clients', 60, function() {
+            return $this->query->get();
+        });
     }
 
     private function queryBuilder(): void

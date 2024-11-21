@@ -10,4 +10,5 @@ Route::get('/user', function (Request $request) {
 
 Route::prefix('client')->group(function () {
     Route::get('/', [ClientController::class, 'index']);
+    Route::post('/create', [ClientController::class, 'store']);
 });

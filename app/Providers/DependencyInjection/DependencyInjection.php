@@ -20,6 +20,7 @@ abstract class DependencyInjection
     {
         return collect([
 			new ClientDi($app),
+            new RepresentativeDi($app),
         ]);
     }
 

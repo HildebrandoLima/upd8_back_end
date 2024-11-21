@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Representative extends Model
 {
@@ -15,13 +15,14 @@ class Representative extends Model
 
     protected $fillable = [
         'name',
-        'cpf',
+        'cnpj',
+        'address',
         'city_id',
     ];
 
-    public function clients(): HasMany
+    public function clients(): BelongsToMany
     {
-        return $this->hasMany(RepresentativeClient::class, 'representative_id');
+        return $this->belongsToMany(Client::class, 'representative_client', 'representative_id', 'client_id');
     }
 
     public function city(): BelongsTo

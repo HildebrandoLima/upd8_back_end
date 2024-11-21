@@ -44,7 +44,7 @@ class Controller extends BaseController
     public function delete(): Response
     {
         return response()->json([
-            "message" => "Ativação/Desativação efetuada com sucesso.",
+            "message" => "Deleção efetuada com sucesso.",
             "data" => [],
             "status" => Response::HTTP_OK,
             "details" => "",

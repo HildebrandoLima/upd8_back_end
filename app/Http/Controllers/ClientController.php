@@ -82,7 +82,7 @@ class ClientController extends Controller
     {
         try {
             $success = $this->deleteClientByIdService->delete($id);
-            return Controller::post($success);
+            return Controller::delete($success);
         } catch (Exception $e) {
             return Controller::error($e);
         }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Domain\Services\Client\Interfaces\ICreateClientService;
+use App\Domain\Services\Client\Interfaces\IDeleteClientByIdService;
 use App\Domain\Services\Client\Interfaces\IListAllClientService;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Client\ClientRequest;
@@ -12,17 +13,20 @@ use Exception;
 
 class ClientController extends Controller
 {
-    private ICreateClientService  $createClientService;
-    private IListAllClientService $listAllClientService;
+    private ICreateClientService     $createClientService;
+    private IDeleteClientByIdService $deleteClientByIdService;
+    private IListAllClientService    $listAllClientService;
 
     public function __construct
     (
-        ICreateClientService  $createClientService,
-        IListAllClientService $listAllClientService
+        ICreateClientService     $createClientService,
+        IDeleteClientByIdService $deleteClientByIdService,
+        IListAllClientService    $listAllClientService
     )
     {
-        $this->createClientService  = $createClientService;
-        $this->listAllClientService = $listAllClientService;
+        $this->createClientService     = $createClientService;
+        $this->deleteClientByIdService = $deleteClientByIdService;
+        $this->listAllClientService    = $listAllClientService;
     }
 
     public function index(ClientRequest $request): Response
@@ -39,6 +43,16 @@ class ClientController extends Controller
     {
         try {
             $success = $this->createClientService->create($request);
+            return Controller::post($success);
+        } catch (Exception $e) {
+            return Controller::error($e);
+        }
+    }
+
+    public function destroy(int $id): Response
+    {
+        try {
+            $success = $this->deleteClientByIdService->delete($id);
             return Controller::post($success);
         } catch (Exception $e) {
             return Controller::error($e);

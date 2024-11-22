@@ -33,11 +33,11 @@ Exploro o ecossistema do Framework Laravel, utilizando funcionalidades como Migr
 
 ### DIAGRAMA
 
-![Diagrama de Entidades](image-2.png)
+![Diagrama de Entidades](image-4.png)
 
 ### BANCO DE DADOS
 
-[!Banco de Dados](image-3.png)
+![Banco de Dados](image-5.png)
 
 ## PASSOS:
 

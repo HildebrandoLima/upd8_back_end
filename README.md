@@ -1,66 +1,1553 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## DESAFIO :UPD8
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+API consta com dois CURDS simples de entidades: Ciente, Representantes e Cidade. No projeto de back-end, abordo uma arquitetura hexagonal, dividada em camadas como: Servives, Repositories, Http e Support.
 
-## About Laravel
+No projeto abordo diversos temas com foco em Programação Orientada a Objetos (POO), Data Transfers Objects (DTOs).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Exploro o ecossistema do Framework Laravel, utilizando funcionalidades como Migrations, Eloquent, Relationships, Factories, Seeders, Providers e Cache. Abaixo segue mais detalhes.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### [Crie sua massa de testes para pessoa, CPF, CNPJ e afins, clicando aqui!](https://www.4devs.com.br/)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Aplicação Web desenvolvida com:<br />
+- Laravel 11x/PHP 8.0x<br />
+- banco de dados MySQL<br/>
 
-## Learning Laravel
+### Funcionalidades (Atualmente desenvolvidas)
+<ul>
+    <li>CRUD de Cliente</li>
+    <li>CRUD de Representante</li>
+</ul>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Funcionalidades (A desenvolver)
+<ul>
+    <li>Integração com IBGE para retornar uma lista de cidades</li>
+    <li>Testes de Unidade e integração</li>
+    <li>Ambiente Docker</li>
+</ul>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### UML.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![UML](image.png)
 
-## Laravel Sponsors
+![UML](image.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### DIAGRAMA.
 
-### Premium Partners
+![Diagrama de Entidades](https://www.mermaidchart.com/raw/a1abf6bb-124a-4dc3-ac1c-697810bad0f3?theme=light&version=v0.1&format=svg)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### BANCO DE DADOS.
 
-## Contributing
+[Clique Aqui!!!](https://drive.google.com/file/d/1ZXPKYphXT_yArgcid6dKTTDCi5IUpCAg/view?usp=sharing)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Faça Você Mesmo
 
-## Code of Conduct
+<details>
+<summary>Detalhes</summary>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Requesitos necessários para executar o projeto:
+<ul>
+    <li>Instalar o PHP versão 8.0</li>
+    <li>Instalar o Laravel versão 9.0</li>
+    <li>Instalar o MySQL versão 8.0</li>
+    <li>Instalar o composer versão 2.4.0</li>
+    <li>Instalar o Postman ou Insomnia</li>
+    <li>Instalar uma IDE de sua escolha (PHPStorm / VSCode)</li>
+    <li>Instalar um cliente SQL de sua escolha (DBeaver / PHPMyAdmin / MySQL WorkBench)</li>
+</ul>
 
-## Security Vulnerabilities
+### Executar o projeto:
+<ul>
+    <li>Clone o projeto: git clone https://github.com/HildebrandoLima/ms-delivey.git</li>
+    <li>Adicione o arquivo .env</li>
+    <li>Execute os comandos: composer install | php artisan key:generate | php artisan jwt:secret</li>
+    <li>Certifique-se que um diretório chamado `**/vendor**` foi criado.</li>
+    <li>Execute o comando: php artisan storage:link | Para liberar o acesso das imagens do servidor</li>
+    <li>Execute o comando: php artisan serve</li>
+</ul>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Banco de Dados:
+> Obanco de dados é do tipo relacional.
 
-## License
+### Criando o Banco de de Dados:
+> No seu .env adicione da seguinte forma:<br />
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+> DB_CONNECTION=mysql<br />
+> DB_HOST=localhost<br />
+> DB_PORT=3306<br />
+> DB_DATABASE=ms_delivery<br />
+> DB_USERNAME=nome_do_usuario<br />
+> DB_PASSWORD=sua_senha<br />
+
+Execute o comando para criar as tabelas:
+
+```
+    php artisan migrate
+```
+
+Há algumas tabelas que possuem dados já padronizados, são elas: roles, permissões, relação de permissões e roles, ddd e uf. Então, execute os seguintes comandos para preenchê-las:
+
+```
+    php artisan db:seed --class=PermissionSeeder
+```
+
+```
+    php artisan db:seed --class=RoleSeeder
+```
+
+```
+    php artisan db:seed --class=PermissionRoleSeeder
+```
+
+```
+    php artisan db:seed --class=DiscagemDiretaDistanciaSeeder
+```
+
+```
+    php artisan db:seed --class=UnidadeFederativaSeeder
+```
+
+```
+    php artisan db:seed --class=CreateUserTestSeeder
+```
+
+Certifique-se que as tabelas foram criadas. Abra seu cliente SQL que você escolheu, e então execute o comando:
+
+```
+    SHOW TABLES;
+```
+
+### [Caso ocorra erro ao executar as migrations, clique aqui!](https://blog.renatolucena.net/post/como-fazer-rollback-de-migration-de-bd-no-laravel)
+
+### E-mail:
+
+### [Crie uma conta na plataforma mailtrap clicando aqui!](https://mailtrap.io/)
+
+> No seu .env adicione da seguinte forma:<br />
+
+> MAIL_MAILER=smtp<br />
+> MAIL_HOST=seu_host<br />
+> MAIL_PORT=2525<br />
+> MAIL_USERNAME=seu_usuario<br />
+> MAIL_PASSWORD=sua_senha<br />
+> MAIL_ENCRYPTION=tls<br />
+> MAIL_FROM_ADDRESS="hello@example.com"<br />
+> MAIL_FROM_NAME="${APP_NAME}"<br />
+
+### Para iniciar o servidor:
+`php artisan serve`
+Agora acesse o endereço http://localhost:8000/api/rota em seu Postman ou Insomnia
+</details>
+
+
+
+## Faça com Docker
+
+<details>
+<summary>Detalhes</summary>
+
+Clone o projeto
+
+```
+git clone https://github.com/HildebrandoLima/ms-delivey.git
+```
+
+<ul>
+    <li>Execute o comando: docker-compose up -d</li>
+    <li>Entrar no container: docker exec -it name_container bash</li>
+    <li>Sair do container: exit</li>
+    <li>Acesse o link: (http://localhost:8080/api/rota)</li>
+</ul>
+
+Para saber se tudo deu certo. Seus containers estarão assim:
+
+![Captura de tela de 2023-06-27 09-58-07](https://github.com/HildebrandoLima/ms-delivey/assets/47666194/6d90cbb0-95d0-4ec9-956a-7c3e0f73f350)
+
+Seu servidor de email:
+
+![Captura de tela de 2023-06-27 10-17-09](https://github.com/HildebrandoLima/ms-delivey/assets/47666194/edcb6c8e-d815-4d57-b19b-cfeff236253d)
+
+</details>
+
+## Testes
+
+Para executar os testes e certificar que, tudo está ok, prepare seu banco de dados para os testes, configure em seu .env.testing. Feito isso, execute o comando abaixo:
+
+```
+    php artisan test
+```
+
+Caso preferira executar apenas um teste, execute o comando abaixo:
+
+```
+    php artisan test --filter=ClassTest
+```
+
+Caso preferira executar um grupo especifico de testes, execute o comando abaixo:
+
+```
+    php artisan test ---group=NameGroup
+```
+
+Caso preferira executar os testes de serviços
+
+```
+    php artisan test tests/Unit/Services
+```
+
+Caso preferira executar os testes de feature
+
+```
+    php artisan test tests/Feature
+```
+
+
+
+## API DOCUMENTAÇÃO
+
+<ul>
+    <li>Os registros não são deletados, e sim ativados e desativados, sempre que necessário.</li>
+    <li>Perfil 1 (Admin) e 2 (Cliente)</li>
+</ul>
+
+### [Ecommerce API - Swagger](https://app.swaggerhub.com/apis-docs/HildebrandoLima/ECOMMERCE/1.0.0#/)
+
+### Login
+
+<details>
+<summary>Detalhes</summary>
+
+### Rotas
+
+|MÉTODO|             ROTA                   |
+|------|------------------------------------|
+| POST | /api/auth/login                    |
+|------|------------------------------------|
+| POST | /api/auth/forgot-password          |
+|------|------------------------------------|
+| POST | /api/auth/refresh-password/{token} |
+|------|------------------------------------|
+| POST | /api/auth/logout                   |
+|------|------------------------------------|
+|GET   | /api/email-verified/               |
+
+<ul>
+    <li>Atenção: A senha é validada conforme o padrão abaixo:</li>
+    <li>8 caracteres no mínimo</li>
+    <li>1 Letra Maiúscula no mínimo</li>
+    <li>1 Número no mínimo</li>
+    <li>1 Caracter especial no mínimo: $*&@#</li>
+    <li>Não é permitido sequência como: aa, bb, 44, etc</li>
+    <li>A url abaixo, funciona para enviar o link no email para redefinição de senha</li>
+    <li>Ele deve ser a mesma url do front-end</li>
+</ul>
+
+> No seu .env adicione da seguinte forma:<br />
+
+> URL_FRONT_FORGOT_PASSWORD=link
+
+### Body: POST
+```
+{
+    "email": "test@gmail.com",
+    "password": "@sua_S3nh4$.",
+}
+```
+
+### Resposta:
+
+<details>
+<summary>200 - OK</summary>
+
+```
+{
+    "message": "Login efetuado com sucesso.",
+    "data": {
+        "acessToken": token,
+        "userId": id,
+        "userName": name,
+        "userEmail": email,
+        "role": {
+            "id": 1,
+            "description": "Admin"
+        }
+        "permissions": [
+            "PERMISSÃO1",
+            "PERMISSÃO2",
+            "PERMISSÃO3",
+            "PERMISSÃO4"
+        ]
+    },
+    "status": 200,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Logout efetuado com sucesso.",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+
+```
+
+```
+{
+    "message": "Solicitação de redefinação de senha efetuada com sucesso.",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Mudança de senha efetuada com sucesso.",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>400 - Bad Request</summary>
+
+```
+{
+    "message": "E-mail inválido.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Senha inválida.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Não foi possível modificar senha.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Error ao logar.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Error ao solicitar mudança de senha.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+</details>
+</details>
+
+### Login Social
+
+<details>
+<summary>Detalhes</summary>
+
+### Rotas
+
+|MÉTODO|                 ROTA                      |
+|------|-------------------------------------------|
+| GET  | /api/auth/login/social{provider}          |
+|------|-------------------------------------------|
+| GET  | /api/auth/login/social{provider}/callback |
+
+<ul>
+<li>Atenção: Essa forma de logar, funciona com os dados da rede social de sua escolha. Teste as rotas em seu navegador.</li>
+<li>Configure nas redes sociais e obtenha as credenciais para autorização e autenticação de acesso.</li>
+</ul>
+
+[GOOGLE](https://console.developers.google.com/?hl=pt-br)
+
+[GITHUB](https://github.com/login)
+
+[FACEBOOK!](https://developers.facebook.com/?locale=pt_BR)
+
+> No seu .env adicione da seguinte forma:<br />
+
+> GOOGLE_CLIENT_ID=codigo_gerado<br />
+> GOOGLE_CLIENT_SECRET=chave_gerada<br />
+> GOOGLE_CALLBACK_URL=http://localhost:8000/api/auth/login/social/google/callback<br />
+
+> GITHUB_CLIENT_ID=codigo_gerado<br />
+> GITHUB_CLIENT_SECRET=chave_gerada<br />
+> GITHUB_CALLBACK_URL=http://localhost:8000/api/auth/login/social/github/callback<br />
+
+> FACEBOOK_CLIENT_ID=codigo_gerado<br />
+> FACEBOOK_CLIENT_SECRET=chave_gerada<br />
+> FACEBOOK_CALLBACK_URL=http://localhost:8000/api/auth/login/social/facebook/callback<br />
+
+### Resposta:
+
+<details>
+<summary>200 - OK</summary>
+
+```
+{
+    "message": "Login efetuado com sucesso.",
+    "data": {
+        "acessToken": token,
+        "userId": id,
+        "userName": name,
+        "userEmail": email,
+        "role": {
+            "id": 1,
+            "description": "Admin" 
+        },
+        "permissions" [
+            "PERMISSÃO1",
+            "PERMISSÃO2",
+            "PERMISSÃO3"
+        ]
+    },
+    "status": 200,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Logout efetuado com sucesso.",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+
+```
+
+</details>
+
+<details>
+<summary>400 - Bad Request</summary>
+
+```
+{
+    "message": "Por favor, faça login usando o Facebook, GitHub ou Google.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Credenciais Inválidas.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+</details>
+</details>
+
+### Usuário
+
+<details>
+<summary>Detalhes</summary>
+
+### Rotas
+
+|MÉTODO|            ROTA               |
+|------|-------------------------------|
+| GET  | /api/user/email-verified/{id} |
+|------|-------------------------------|
+| GET  | /api/user/list                |
+|------|-------------------------------|
+| GET  | /api/user/list/find           |
+|------|-------------------------------|
+| PUT  | /api/user/edit                |
+|------|-------------------------------|
+| POST | /api/user/save                |
+
+<ul>
+    <li>Em perfil é verdadeiro para admin e false para cliente.</li>
+    <li>?page=1&perPage=10&active=1</li>
+    <li>?search=Hill&active=1</li>
+</ul>
+
+### Body: POST
+```
+{
+    "nome": "Hill",
+    "cpf": "572.561.700-92",
+    "email": "test@gmail.com",
+    "senha": "Hil@03#1.4",
+    "dataNascimento": "2023-03-25 18:20:59",
+    "genero": "Masculino",
+    "perfil": 1,
+    "ativo": true
+}
+```
+
+### Body: PUT
+```
+{
+    "id": 1,
+    "nome": "Hill",
+    "email": "test@gmail.com",
+    "genero": "Masculino",
+    "perfil": 1,
+    "ativo": true
+}
+```
+
+### Resposta:
+
+<details>
+<summary>200 - OK</summary>
+
+```
+{
+    "message": "Cadastro efetuado com sucesso.",
+    "data": id_do_ultimo_cadastro,
+    "status": 200,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Edição efetuada com sucesso.",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>400 - Bad Request</summary>
+
+```
+{
+    "message": "Registro já existente.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Error ao efetuar ação.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>401 - Unauthorized</summary>
+
+```
+{
+    "message": "Acesso não autorizado.",
+    "data": [],
+    "status": 401,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>403 - Forbidden</summary>
+
+```
+{
+    "message": "Permissão negada.",
+    "data": [],
+    "status": 403,
+    "details": ""
+}
+```
+
+</details>
+</details>
+
+### Fornecedor
+
+<details>
+<summary>Detalhes</summary>
+
+### Rotas
+
+|MÉTODO|            ROTA              |
+|------|------------------------------|
+| GET  | /api/provider/list           |
+|------|------------------------------|
+| GET  | /api/provider/list/find      |
+|------|------------------------------|
+| POST | /api/provider/save           |
+|------|------------------------------|
+| PUT  | /api/provider/edit           |
+
+<ul>
+    <li>?page=1&perPage=10&active=1</li>
+    <li>?search=System=&active=1</li>
+</ul>
+
+### Body: PUT
+```
+{
+    "razaoSocial": "Teste Test",
+    "cnpj": "89.872.593/0001-90",
+    "email": "hill@email.com.br",
+    "dataFundacao": "2022-12-25 13:28:59",
+    "ativo": true
+}
+```
+
+### Body: PUT
+```
+{
+    "id": 1,
+    "razaoSocial": "Teste Test",
+    "cnpj": "89.872.593/0001-90",
+    "email": "hill@email.com.br",
+    "ativo": true
+}
+```
+
+### Resposta:
+
+<details>
+<summary>200 - OK</summary>
+
+```
+{
+    "message": "Cadastro efetuado com sucesso.",
+    "data": id_do_ultimo_cadastro,
+    "status": 200,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Edição efetuada com sucesso/",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>400 - Bad Request</summary>
+
+```
+{
+    "message": "Registro já existente.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Error ao efetuar ação.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>401 - Unauthorized</summary>
+
+```
+{
+    "message": "Acesso não autorizado.",
+    "data": [],
+    "status": 401,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>403 - Forbidden</summary>
+
+```
+{
+    "message": "Permissão negada.",
+    "data": [],
+    "status": 403,
+    "details": ""
+}
+```
+
+</details>
+</details>
+
+### Endereço
+
+<details>
+<summary>Detalhes</summary>
+
+### Rotas
+
+|MÉTODO|              ROTA           |
+|------|-----------------------------|
+| GET  | /api/address/list/uf        |
+|------|-----------------------------|
+| PUT  | /api/address/save           |
+
+<ul>
+    <li>Nos body de endereço, é preciso identificar quem deseja atribuir os mesmos. No caso de usuário, ex.: ("usuarioId": 1) ou fornecedor, ex.: ("fornecedorId": 1)</li>
+</ul>
+
+### Body: POST
+
+```
+{
+    "logradouro": "Rua",
+    "descricao": "KKK N°25",
+    "bairro": "Centro",
+    "cidade": "Fortaleza",
+    "cep": 1234-567,
+    "uf": "CE",
+    "usuarioId": 24,
+    "ativo": true
+}
+```
+
+ou
+
+```
+{
+    "logradouro": "Avenida",
+    "descricao": "KKK N°25",
+    "bairro": "Centro",
+    "cidade": "Fortaleza",
+    "cep": 1234-567,
+    "uf": "CE",
+    "fornecedorId": 33,
+    "ativo": true
+}
+```
+
+### Body: PUT
+
+```
+{
+    "id": 1,
+    "logradouro": "Rua",
+    "descricao": "KKK N°25",
+    "bairro": "Centro",
+    "cidade": "Fortaleza",
+    "cep": 1234-567,
+    "uf": "CE",
+    "usuarioId": 24,
+    "ativo": true
+}
+```
+
+ou
+
+```
+{
+    "id": 1,
+    "logradouro": "Rua",
+    "descricao": "KKK N°25",
+    "bairro": "Centro",
+    "cidade": "Fortaleza",
+    "cep": 1234-567,
+    "uf": "CE",
+    "fornecedorId": 33,
+    "ativo": true
+}
+```
+
+### Resposta:
+
+<details>
+<summary>200 - OK</summary>
+
+```
+{
+    "message": "Cadastro efetuado com sucesso.",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Edição efetuada com sucesso.",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>400 - Bad Request</summary>
+
+```
+{
+    "message": "Registro já existente.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Registro não encontrado.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Error ao efetuar ação.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>401 - Unauthorized</summary>
+
+```
+{
+    "message": "Acesso não autorizado.",
+    "data": [],
+    "status": 401,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>403 - Forbidden</summary>
+
+```
+{
+    "message": "Permissão Negada.",
+    "data": [],
+    "status": 403,
+    "details": ""
+}
+```
+
+</details>
+</details>
+
+### Telefone
+
+<details>
+<summary>Detalhes</summary>
+
+### Rotas
+
+|MÉTODO|            ROTA               |
+|------|-------------------------------|
+| POST | /api/telephone/save           |
+|------|-------------------------------|
+| PUT  | /api/telephone/edit           |
+
+<ul>
+    <li>Nos body de endereço e telefone, é preciso identificar quem deseja atribuir os mesmos. No caso de usuário, ex.: ("usuarioId": 1) ou fornecedor, ex.: ("fornecedorId": 1)</li>
+    <li>O campo "tipo", pode ser do tipo: ('Celular', 'Fixo')</li>
+</ul>
+
+### Body: POST
+
+```
+[
+    {
+        "ddd": "CE",
+        "numero": "(85) 9.9506-9315",
+        "tipo": "Celular",
+        "usuarioId": 2,
+        "ativo": true
+    },
+    {
+        "ddd": "CE",
+        "numero": "(85) 9.8045-8709",
+        "tipo": "Fixo",
+        "dddId": 1,
+        "usuarioId": 2,
+        "ativo": true
+    }
+]
+```
+
+ou
+
+```
+[
+    {
+        "ddd": "CE",
+        "numero": "99506-9315",
+        "tipo": "Celular",
+        "fornecedorId": 3,
+        "ativo": true
+    },
+    {
+        "ddd": "CE",
+        "numero": "98045-8709",
+        "tipo": "Fixo",
+        "fornecedorId": 3,
+        "ativo": true
+    }
+]
+```
+
+### Body: PUT
+
+```
+{
+    "ddd": "CE",
+    "numero": "(85) 9.9506-9315",
+    "tipo": "Celular",
+    "usuarioId": 2,
+    "ativo": true
+}
+```
+
+ou
+
+```
+{
+    "ddd": "CE",
+    "numero": "99506-9315",
+    "tipo": "Celular",
+    "fornecedorId": 3,
+    "ativo": true
+}
+```
+
+### Resposta:
+
+<details>
+<summary>200 - OK</summary>
+
+```
+{
+    "message": "Cadastro efetuado com sucesso.",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Edição efetuada com sucesso.",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>400 - Bad Request</summary>
+    
+```
+{
+    "message": "Registro já existente.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Registro não encontrado.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Error ao efetuar ação.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>401 - Unauthorized</summary>
+
+```
+{
+    "message": "Acesso não autorizado.",
+    "data": [],
+    "status": 401,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>403 - Forbidden</summary>
+
+```
+{
+    "message": "Permissão negada.",
+    "data": [],
+    "status": 403,
+    "details": ""
+}
+```
+
+</details>
+</details>
+
+### Categoria
+
+<details>
+<summary>Detalhes</summary>
+
+### Rotas
+
+|MÉTODO|              ROTA            |
+|------|------------------------------|
+| GET  | /api/category/list           |
+|------|------------------------------|
+| GET  | /api/category/list/find      |
+|------|------------------------------|
+| POST | /api/category/save           |
+|------|------------------------------|
+| PUT  | /api/category/edit           |
+
+<ul>
+    <li>?page=1&perPage=10&active=1</li>
+    <li>?search=Eletrônicos&active=1</li>
+</ul>
+
+### Body: POST
+```
+{
+    "nome": "Eletrônicos",
+    "ativo": true
+}
+```
+
+### Body: PUT
+```
+{
+    "id": 1,
+    "nome": "Eletrônicos",
+    "ativo": true
+}
+```
+
+### Resposta:
+
+<details>
+<summary>200 - OK</summary>
+
+```
+{
+    "message": "Cadastro efetuado com sucesso.",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Edição efetuada com sucesso.",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>400 - Bad Request</summary>
+
+```
+{
+    "message": "Registro já existente.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Registro não encontrado.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Error ao efetuar ação.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+</details>
+<details>
+
+<summary>401 - Unauthorized</summary>
+
+```
+{
+    "message": "Acesso não autorizado.",
+    "data": [],
+    "status": 401,
+    "details": ""
+}
+```
+
+</details>
+<details>
+
+<summary>403 - Forbidden</summary>
+
+```
+{
+    "message": "Permissão Negada.",
+    "data": [],
+    "status": 403,
+    "details": ""
+}
+```
+
+</details>
+</details>
+
+### Produto
+
+<details>
+<summary>Detalhes</summary>
+
+### Rotas
+
+|MÉTODO|            ROTA             |
+|------|-----------------------------|
+| GET  | /api/product/list           |
+|------|-----------------------------|
+| GET  | /api/product/list/find      |
+|------|-----------------------------|
+| POST | /api/product/save           |
+|------|-----------------------------|
+| PUT  | /api/product/edit           |
+
+<ul>
+    <li>O campo "unidadeMedida", pode ser do tipo: ('UN', 'G', 'KG', 'ML', 'L', 'M2', 'CX')
+</li>
+    <li>?page=1&perPage=10&active=1</li>
+    <li>O produto pode ser listagem pela busca do item ou pela categoria.</li>
+    <li>?search=TV%LED%'55&active=1</li>
+    <li>?id=3&active=1</li>
+</ul>
+
+### Body: POST
+```
+{
+    "nome": "TV LED 55' FULLHD",
+    "precoCusto": 2,000.99,
+    "precoVenda": 2,399.95,
+    "codigoBarra": "1234567890123",
+    "descricao": "TV LED 55' FULLHD",
+    "quantidade": 13,
+    "unidadeMedida": "UN",
+    "dataValidade": "2024-12-25 13:28:59",
+    "categoriaId": 10,
+    "fornecedorId": 2,
+    "imagens": [files],
+    "ativo": true
+}
+```
+
+### Body: PUT
+```
+{
+    "id", 1,
+    "nome": "Batata Frita Sabor Original Pringles - 114g",
+    "precoCusto": 15.99,
+    "precoVenda": 13.99,
+    "codigoBarra": "1234567890123",
+    "descricao": "Batata Frita Sabor Original Pringles - 114g",
+    "quantidade": 13,
+    "unidadeMedida": "UN",
+    "dataValidade": "2024-12-25 13:28:59",
+    "categoriaId": 10,
+    "fornecedorId": 2,
+    "ativo": true
+}
+```
+
+### Resposta:
+
+<details>
+<summary>200 - OK</summary>
+
+```
+{
+    "message": "Cadastro efetuado com sucesso.",
+    "data": id_do_ultimo_cadastro,
+    "status": 200,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Edição efetuada com sucesso.",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>400 - Bad Request</summary>
+
+```
+{
+    "message": "Registro já existente.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Registro não encontrado.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Error ao efetuar ação.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+</details>
+
+<details>
+<summary>401 - Unauthorized</summary>
+
+```
+{
+    "message": "Acesso não autorizado.",
+    "data": [],
+    "status": 401,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>403 - Forbidden</summary>
+
+```
+{
+    "message": "Permissão negada.",
+    "data": [],
+    "status": 403,
+    "details": ""
+}
+```
+
+</details>
+</details>
+
+### Pedido
+
+<details>
+<summary>Detalhes</summary>
+
+### Rotas
+
+|MÉTODO|          ROTA             |
+|------|---------------------------|
+| GET  | /api/order/list           |
+|------|---------------------------|
+| GET  | /api/order/list/find      |
+|------|---------------------------|
+| GET  | /api/order/save           |
+
+<ul>
+    <li>?page=1&perPage=10&active=1</li>
+    <li>?id=200&search=100005000=&active=1</li>
+    <li>A listagem do pedido é realizada pelo usuário.</li>
+    <li>O pedido não pode ser modificado.</li>
+    <li>O campo "tipoEntrega", pode ser do tipo ('Expresso', 'Correio', 'Retirada')</li>
+</ul>
+
+### Body: POST
+```
+{
+    "quantidadeItem": 4,
+    "total": 102.99,
+    "valorEntrega": 13.40,
+    "tipoEntrega": "Expresso",
+    "ativo": true,
+    "usuarioId": 3,
+    "itens": [
+        {
+            "quantidadeItem": 1,
+            "subTotal": 14.85,
+            "produtoId": 32,
+            "ativo": true
+        },
+        {
+            "quantidadeItem": 2,
+            "subTotal": 13.18,
+            "produtoId": 33,
+            "ativo": true
+        }
+    ]
+}
+```
+
+Não é permitido alterar os dados do pedido.
+
+### Resposta:
+
+<details>
+<summary>200 - OK</summary>
+
+```
+{
+    "message": "Cadastro efetuado com sucesso.",
+    "data": id_do_ultimo_cadastro,
+    "status": 200,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>400 - Bad Request</summary>
+
+```
+{
+    "message": "Registro já existente.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Error ao efetuar ação.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+</details>
+
+<details>
+<summary>401 - Unauthorized</summary>
+
+```
+{
+    "message": "Acesso não autorizado.",
+    "data": [],
+    "status": 401,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>403 - Forbidden</summary>
+
+```
+{
+    "message": "Permissão negada.",
+    "data": [],
+    "status": 403,
+    "details": ""
+}
+```
+
+</details>
+</details>
+
+### Pagamento
+
+<details>
+<summary>Detalhes</summary>
+
+### Rotas
+
+|MÉTODO |          ROTA            |
+|-------|--------------------------|
+| POST  | /api/payment/save        |
+
+<ul>
+    <li>O campo "metodoPagamento", pode ser do tipo:</li>
+    <li>('Boleto Bancário', 'Crédito', 'Débito', 'Pix')</li>
+</ul>
+
+### Body: POST
+
+Com cartão
+
+```
+{
+    "numeroCartao": "3433 0684 3408 6543",
+    "tipoCartao": "Crédio ou Débito",
+    "dataValidade": "2023-05-16 13:44:18",
+    "parcela": 3,
+    "total": 399.48,
+    "metodoPagamento": "Crédito",
+    "pedidoId": 25
+    "ativo": true,
+}
+```
+
+Com dinheiro ou PIX
+
+```
+{
+    "total": 20.50,
+    "metodoPagamento": "Pix",
+    "pedidoId": 30
+    "ativo": true,
+}
+```
+
+### Resposta:
+
+<details>
+<summary>200 - OK</summary>
+
+```
+{
+    "message": "Cadastro efetuado com sucesso.",
+    "data": true,
+    "status": 200,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>400 - Bad Request</summary>
+
+```
+{
+    "message": "Error ao efetuar ação.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+```
+{
+    "message": "Registro não encontrado.",
+    "data": [],
+    "status": 400,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>401 - Unauthorized</summary>
+
+```
+{
+    "message": "Acesso não autorizado.",
+    "data": [],
+    "status": 401,
+    "details": ""
+}
+```
+
+</details>
+
+<details>
+<summary>403 - Forbidden</summary>
+
+```
+{
+    "message": "Permissão negada.",
+    "data": [],
+    "status": 403,
+    "details": ""
+}
+```
+
+</details>
+</details>

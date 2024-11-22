@@ -9,7 +9,6 @@ use App\Models\Client;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Cache;
 
 class ListAllClientRepository implements IListAllClientRepository
 {
@@ -21,18 +20,14 @@ class ListAllClientRepository implements IListAllClientRepository
     {
         $this->setRequest($request);
         $this->queryBuilder();
-        return Cache::remember('clients', 60, function() {
-            return $this->query->paginate(10);
-        });
+        return $this->query->paginate(10);
     }
 
     public function noPagination(ClientRequest $request): Collection
     {
         $this->setRequest($request);
         $this->queryBuilder();
-        return Cache::remember('clients', 60, function() {
-            return $this->query->get();
-        });
+        return $this->query->get();
     }
 
     private function queryBuilder(): void

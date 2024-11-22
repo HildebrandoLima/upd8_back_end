@@ -25,21 +25,21 @@ Exploro o ecossistema do Framework Laravel, utilizando funcionalidades como Migr
     <li>Ambiente Docker</li>
 </ul>
 
-### UML.
+### UML
 
 ![UML](image.png)
 
-![UML](image.png)
+![UML](image-1.png)
 
-### DIAGRAMA.
+### DIAGRAMA
 
-![Diagrama de Entidades](https://www.mermaidchart.com/raw/a1abf6bb-124a-4dc3-ac1c-697810bad0f3?theme=light&version=v0.1&format=svg)
+![Diagrama de Entidades](image-2.png)
 
-### BANCO DE DADOS.
+### BANCO DE DADOS
 
-[Clique Aqui!!!](https://drive.google.com/file/d/1ZXPKYphXT_yArgcid6dKTTDCi5IUpCAg/view?usp=sharing)
+[!Banco de Dados](image-3.png)
 
-## Faça Você Mesmo
+## PASSOS:
 
 <details>
 <summary>Detalhes</summary>

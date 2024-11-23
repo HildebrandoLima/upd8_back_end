@@ -109,4 +109,4 @@ Certifique-se que as tabelas foram criadas. Abra seu cliente SQL que você escol
 Agora acesse o endereço http://localhost:8000/api/rota em seu Postman ou Insomnia
 </details>
 
-### [API - Swagger](https://app.swaggerhub.com/apis-docs/HildebrandoLima/ECOMMERCE/1.0.0#/)
+### [API - Swagger](https://app.swaggerhub.com/apis/HILDEBRANDOLIMA16/api-upd8/1.0.0)

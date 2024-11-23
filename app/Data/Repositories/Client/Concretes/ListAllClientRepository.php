@@ -32,7 +32,7 @@ class ListAllClientRepository implements IListAllClientRepository
 
     private function queryBuilder(): void
     {
-        $this->query = Client::with('city');
+        $this->query = Client::with('city')->join('city', 'city.id', '=', 'client.city_id');
         $this->getFilter();
         $this->order();
     }
@@ -56,11 +56,11 @@ class ListAllClientRepository implements IListAllClientRepository
         }
 
         if (!empty($this->request->state)) {
-            $this->query->where('city.state', $this->request->state);
+            $this->query->where('city.state', 'like', '%' . $this->request->state . '%');
         }
 
         if (!empty($this->request->city)) {
-            $this->query->where('city.city', $this->request->city);
+            $this->query->where('city.city_name', 'like', '%' . $this->request->city . '%');
         }
 
         $this->order = strtoupper($this->request->order);

@@ -19,6 +19,7 @@ abstract class DependencyInjection
     public static function providers(Application $app): Collection
     {
         return collect([
+            new CityDi($app),
 			new ClientDi($app),
             new RepresentativeDi($app),
         ]);

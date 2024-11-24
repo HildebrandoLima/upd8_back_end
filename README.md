@@ -19,11 +19,6 @@ Exploro o ecossistema do Framework Laravel, utilizando funcionalidades como Migr
     <li>Testes de Unidade e de Integração</li>
 </ul>
 
-### Funcionalidades (A desenvolver)
-<ul>
-    <li>Ambiente Docker</li>
-</ul>
-
 ### UML
 
 ![UML](image.png)

@@ -7,9 +7,9 @@ use App\Domain\Dtos\ClientDto;
 use App\Domain\Services\Client\Interfaces\IListAllClientService;
 use App\Domain\Traits\Dtos\ListPaginationMapper;
 use App\Domain\Traits\RequestConfigurator;
+use App\Http\Requests\Client\ClientRequest;
 use App\Support\Utils\Paginator\Interface\IPagination;
 use App\Support\Utils\Params\Interface\ISearch;
-use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 
 class ListAllClientService implements IListAllClientService
@@ -32,7 +32,7 @@ class ListAllClientService implements IListAllClientService
         $this->search = $search;
     }
 
-    public function listAll(Request $request): Collection
+    public function listAll(ClientRequest $request): Collection
     {
         $this->setParams($request, $this->pagination, $this->search);
         $this->setRequest($request);

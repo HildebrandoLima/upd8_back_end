@@ -12,7 +12,6 @@ use App\Http\Requests\Representative\RepresentativeRequest;
 use App\Http\Requests\Representative\CreateRepresentativeRequest;
 use App\Http\Requests\Representative\UpdateRepresentativeRequest;
 use Symfony\Component\HttpFoundation\Response;
-use Illuminate\Http\Request;
 use Exception;
 
 class RepresentativeController extends Controller
@@ -39,7 +38,7 @@ class RepresentativeController extends Controller
         $this->updateRepresentativeService     = $updateRepresentativeService;
     }
 
-    public function index(Request $request): Response
+    public function index(RepresentativeRequest $request): Response
     {
         try {
             $success = $this->listAllRepresentativeService->listAll($request);
@@ -49,10 +48,10 @@ class RepresentativeController extends Controller
         }
     }
 
-    public function show(RepresentativeRequest $request): Response
+    public function show(int $id): Response
     {
         try {
-            $success = $this->listRepresentativeByIdService->listFind($request->id);
+            $success = $this->listRepresentativeByIdService->listFind($id);
             return Controller::get($success);
         } catch (Exception $e) {
             return Controller::error($e);
@@ -79,10 +78,10 @@ class RepresentativeController extends Controller
         }
     }
 
-    public function destroy(RepresentativeRequest $request): Response
+    public function destroy(int $id): Response
     {
         try {
-            $success = $this->deleteRepresentativeByIdService->delete($request->id);
+            $success = $this->deleteRepresentativeByIdService->delete($id);
             return Controller::delete($success);
         } catch (Exception $e) {
             return Controller::error($e);

@@ -4,9 +4,9 @@ namespace App\Data\Repositories\Client\Concretes;
 
 use App\Data\Repositories\Client\Interfaces\IListAllClientRepository;
 use App\Domain\Traits\RequestConfigurator;
+use App\Http\Requests\Client\ClientRequest;
 use App\Models\Client;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 
@@ -16,14 +16,14 @@ class ListAllClientRepository implements IListAllClientRepository
     private Builder $query;
     private string $order = "";
 
-    public function hasPagination(Request $request): LengthAwarePaginator
+    public function hasPagination(ClientRequest $request): LengthAwarePaginator
     {
         $this->setRequest($request);
         $this->queryBuilder();
         return $this->query->paginate(10);
     }
 
-    public function noPagination(Request $request): Collection
+    public function noPagination(ClientRequest $request): Collection
     {
         $this->setRequest($request);
         $this->queryBuilder();

@@ -14,16 +14,16 @@ Route::get('/cities', [CityController::class, 'index'])->name('cities');
 
 Route::prefix('client')->group(function () {
     Route::get('/', [ClientController::class, 'index'])->name('client.all');
-    Route::get('/find', [ClientController::class, 'show'])->name('client.find');
+    Route::get('/{id}', [ClientController::class, 'show'])->name('client.find');
     Route::post('/create', [ClientController::class, 'store'])->name('client.create');
     Route::put('/update', [ClientController::class, 'update'])->name('client.update');
-    Route::delete('/delete', [ClientController::class, 'destroy'])->name('client.delete');
+    Route::delete('/delete/{id}', [ClientController::class, 'destroy'])->name('client.delete');
 });
 
 Route::prefix('representative')->group(function () {
     Route::get('/', [RepresentativeController::class, 'index'])->name('representative.all');
-    Route::get('/find', [RepresentativeController::class, 'show'])->name('representative.find');
+    Route::get('/{id}', [RepresentativeController::class, 'show'])->name('representative.find');
     Route::post('/create', [RepresentativeController::class, 'store'])->name('representative.create');
     Route::put('/update', [RepresentativeController::class, 'update'])->name('representative.update');
-    Route::delete('/delete', [RepresentativeController::class, 'destroy'])->name('representative.delete');
+    Route::delete('/delete/{id}', [RepresentativeController::class, 'destroy'])->name('representative.delete');
 });

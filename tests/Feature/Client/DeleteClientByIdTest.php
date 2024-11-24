@@ -21,34 +21,13 @@ class DeleteClientByIdTest extends TestCase
     {
         // Arrange
         $client = Client::factory()->createOne()->toArray();
-        $data = [
-            'id' => $client['id']
-        ];
 
         // Act
-        $response = $this->deleteJson(route('client.delete'), $data);
+        $response = $this->deleteJson(route('client.delete', ['id' => $client['id']]));
 
         // Assert
         $response->assertOk();
         $this->assertJson($this->baseResponse($response));
         $this->assertEquals($this->httpStatusCode($response), 200);
-    }
-
-    /**
-     * @test
-     * @group client
-     */
-    public function it_endpoint_delete_base_response_400(): void
-    {
-        // Arrange
-        $data = [9999];
-
-        // Act
-        $response = $this->deleteJson(route('client.delete'), $data);
-
-        // Assert
-        $response->assertStatus(400);
-        $this->assertJson($this->baseResponse($response));
-        $this->assertEquals($this->httpStatusCode($response), 400);
     }
 }

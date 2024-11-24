@@ -12,7 +12,6 @@ use App\Http\Requests\Client\ClientRequest;
 use App\Http\Requests\Client\CreateClientRequest;
 use App\Http\Requests\Client\UpdateClientRequest;
 use Symfony\Component\HttpFoundation\Response;
-use Illuminate\Http\Request;
 use Exception;
 
 class ClientController extends Controller
@@ -39,7 +38,7 @@ class ClientController extends Controller
         $this->updateClientService     = $updateClientService;
     }
 
-    public function index(Request $request): Response
+    public function index(ClientRequest $request): Response
     {
         try {
             $success = $this->listAllClientService->listAll($request);
@@ -49,10 +48,10 @@ class ClientController extends Controller
         }
     }
 
-    public function show(ClientRequest $request): Response
+    public function show(int $id): Response
     {
         try {
-            $success = $this->listClientByIdService->listFind($request->id);
+            $success = $this->listClientByIdService->listFind($id);
             return Controller::get($success);
         } catch (Exception $e) {
             return Controller::error($e);
@@ -79,10 +78,10 @@ class ClientController extends Controller
         }
     }
 
-    public function destroy(ClientRequest $request): Response
+    public function destroy(int $id): Response
     {
         try {
-            $success = $this->deleteClientByIdService->delete($request->id);
+            $success = $this->deleteClientByIdService->delete($id);
             return Controller::delete($success);
         } catch (Exception $e) {
             return Controller::error($e);

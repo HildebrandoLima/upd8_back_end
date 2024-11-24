@@ -2,12 +2,12 @@
 
 namespace App\Data\Repositories\Client\Interfaces;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\Client\ClientRequest;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 
 interface IListAllClientRepository
 {
-    public function hasPagination(Request $request): LengthAwarePaginator;
-    public function noPagination(Request $request): Collection;
+    public function hasPagination(ClientRequest $request): LengthAwarePaginator;
+    public function noPagination(ClientRequest $request): Collection;
 }

@@ -2,10 +2,10 @@
 
 namespace App\Domain\Services\Representative\Interfaces;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\Representative\RepresentativeRequest;
 use Illuminate\Support\Collection;
 
 interface IListAllRepresentativeService
 {
-    public function listAll(Request $request): Collection;
+    public function listAll(RepresentativeRequest $request): Collection;
 }

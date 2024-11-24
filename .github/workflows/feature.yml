@@ -1,0 +1,38 @@
+name: Tests Feature
+
+on:
+  pull_request:
+    branches: ["production", "homolog", "development"]
+
+jobs:
+  build_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run deployment commands on server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          password: ${{ secrets.REMOTE_PASSWORD }}
+          port: ${{ secrets.REMOTE_PORT }}
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_DATABASE: ${{ secrets.DB_DATABASE_DEV }}
+          DB_USERNAME: ${{ secrets.DB_USERNAME_DEV }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          script: |
+            cd ${{ secrets.REMOTE_PATH }}
+            git pull
+            composer install --no-dev --no-progress --optimize-autoloader
+            php artisan key:generate
+            php artisan jwt:secret
+            php artisan migrate
+            php artisan db:seed --class=DatabaseSeeder
+            php artisan optimize
+            php artisan config:clear
+            php artisan test tests/Feature

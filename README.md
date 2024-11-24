@@ -16,12 +16,11 @@ Exploro o ecossistema do Framework Laravel, utilizando funcionalidades como Migr
 <ul>
     <li>CRUD de Cliente</li>
     <li>CRUD de Representante</li>
+    <li>Testes de Unidade e de Integração</li>
 </ul>
 
 ### Funcionalidades (A desenvolver)
 <ul>
-    <li>Integração com IBGE para retornar uma lista de cidades</li>
-    <li>Testes de Unidade e integração</li>
     <li>Ambiente Docker</li>
 </ul>
 
@@ -110,3 +109,47 @@ Agora acesse o endereço http://localhost:8000/api/rota em seu Postman ou Insomn
 </details>
 
 ### [API - Swagger](https://app.swaggerhub.com/apis-docs/HILDEBRANDOLIMA16/api-upd8/1.0.0)
+
+## TESTES
+
+Caso queira executar todos os testes, use o comando:
+
+```
+    php artisan test
+```
+
+Caso queira executar apenas os testes de integração, use o comando:
+
+```
+    php artisan test tests/Feature
+```
+
+Caso queira executar apenas os testes de unidade, para a camada de service, use o comando:
+
+```
+    php artisan test tests/Unit/Services
+```
+
+Caso queira executar apenas os testes de unidade, para a camada de repository, use o comando:
+
+```
+    php artisan test tests/Unit/Repositories
+```
+
+Caso queira executar apenas os testes de unidade, para ambas as camadas, use o comando:
+
+```
+    php artisan test tests/Unit
+```
+
+Caso queira executar apenas um teste em específico, use o comando:
+
+```
+    php artisan test --filter=ClassTest
+```
+
+Caso queira executar os grupos de testes específicos, use o comando:
+
+```
+    php artisan test ---group=NameGroup
+```

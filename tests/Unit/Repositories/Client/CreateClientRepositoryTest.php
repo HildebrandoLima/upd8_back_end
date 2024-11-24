@@ -3,6 +3,7 @@
 namespace Tests\Unit\Repositories\Client;
 
 use App\Data\Repositories\Client\Concretes\CreateClientRepository;
+use App\Domain\Traits\GenerateData\GenerateCPF;
 use App\Http\Requests\Client\CreateClientRequest;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Str;
@@ -10,6 +11,8 @@ use Tests\TestCase;
 
 class CreateClientRepositoryTest extends TestCase
 {
+    use GenerateCPF;
+
     use DatabaseTransactions;
     private CreateClientRepository $createClientRepository;
 

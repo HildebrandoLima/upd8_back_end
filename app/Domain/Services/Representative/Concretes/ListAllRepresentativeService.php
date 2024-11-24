@@ -7,9 +7,9 @@ use App\Domain\Dtos\RepresentativeDto;
 use App\Domain\Services\Representative\Interfaces\IListAllRepresentativeService;
 use App\Domain\Traits\Dtos\ListPaginationMapper;
 use App\Domain\Traits\RequestConfigurator;
-use App\Http\Requests\Representative\RepresentativeRequest;
 use App\Support\Utils\Paginator\Interface\IPagination;
 use App\Support\Utils\Params\Interface\ISearch;
+use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 
 class ListAllRepresentativeService implements IListAllRepresentativeService
@@ -32,7 +32,7 @@ class ListAllRepresentativeService implements IListAllRepresentativeService
         $this->search = $search;
     }
 
-    public function listAll(RepresentativeRequest $request): Collection
+    public function listAll(Request $request): Collection
     {
         $this->setParams($request, $this->pagination, $this->search);
         $this->setRequest($request);

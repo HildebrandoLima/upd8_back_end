@@ -10,11 +10,10 @@ use App\Domain\Services\Client\Interfaces\IUpdateClientService;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Client\ClientRequest;
 use App\Http\Requests\Client\CreateClientRequest;
-use App\Http\Requests\Client\DeleteClientRequest;
 use App\Http\Requests\Client\UpdateClientRequest;
 use Symfony\Component\HttpFoundation\Response;
-use Exception;
 use Illuminate\Http\Request;
+use Exception;
 
 class ClientController extends Controller
 {

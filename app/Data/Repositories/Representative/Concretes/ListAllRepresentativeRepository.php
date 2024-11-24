@@ -4,9 +4,9 @@ namespace App\Data\Repositories\Representative\Concretes;
 
 use App\Data\Repositories\Representative\Interfaces\IListAllRepresentativeRepository;
 use App\Domain\Traits\RequestConfigurator;
-use App\Http\Requests\Representative\RepresentativeRequest;
 use App\Models\Representative;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 
@@ -16,14 +16,14 @@ class ListAllRepresentativeRepository implements IListAllRepresentativeRepositor
     private Builder $query;
     private string $order = "";
 
-    public function hasPagination(RepresentativeRequest $request): LengthAwarePaginator
+    public function hasPagination(Request $request): LengthAwarePaginator
     {
         $this->setRequest($request);
         $this->queryBuilder();
         return $this->query->paginate(10);
     }
 
-    public function noPagination(RepresentativeRequest $request): Collection
+    public function noPagination(Request $request): Collection
     {
         $this->setRequest($request);
         $this->queryBuilder();

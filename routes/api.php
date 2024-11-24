@@ -22,8 +22,8 @@ Route::prefix('client')->group(function () {
 
 Route::prefix('representative')->group(function () {
     Route::get('/', [RepresentativeController::class, 'index'])->name('representative.all');
-    Route::get('/{id}', [RepresentativeController::class, 'show'])->name('representative.find');
+    Route::get('/find', [RepresentativeController::class, 'show'])->name('representative.find');
     Route::post('/create', [RepresentativeController::class, 'store'])->name('representative.create');
     Route::put('/update', [RepresentativeController::class, 'update'])->name('representative.update');
-    Route::delete('/delete/{id}', [RepresentativeController::class, 'destroy'])->name('representative.delete');
+    Route::delete('/delete', [RepresentativeController::class, 'destroy'])->name('representative.delete');
 });

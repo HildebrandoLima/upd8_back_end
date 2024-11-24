@@ -4,6 +4,7 @@ namespace App\Http\Requests\Representative;
 
 use App\Domain\Traits\ValidationPermission;
 use App\Http\Requests\BaseRequest;
+use App\Support\Utils\Messages\DefaultErrorMessages;
 
 class RepresentativeRequest extends BaseRequest
 {
@@ -16,11 +17,17 @@ class RepresentativeRequest extends BaseRequest
 
     public function rules(): array
     {
-        return [];
+        return [
+            'id' => 'required|int|exists:representative,id',
+        ];
     }
 
     public function messages(): array
     {
-        return [];
+        return [
+            'id.exists' => DefaultErrorMessages::NOT_FOUND,
+            'id.required' => DefaultErrorMessages::REQUIRED_FIELD,
+            'id.int' => DefaultErrorMessages::FIELD_MUST_BE_INTEGER,
+        ];
     }
 }

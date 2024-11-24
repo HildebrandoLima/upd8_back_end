@@ -21,9 +21,12 @@ class DeleteClientByIdTest extends TestCase
     {
         // Arrange
         $client = Client::factory()->createOne()->toArray();
+        $data = [
+            'id' => $client['id'],
+        ];
 
         // Act
-        $response = $this->deleteJson(route('client.delete', ['id' => $client['id']]));
+        $response = $this->deleteJson(route('client.delete', $data));
 
         // Assert
         $response->assertOk();

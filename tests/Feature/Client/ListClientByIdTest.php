@@ -24,9 +24,12 @@ class ListClientByIdTest extends TestCase
     {
         // Arrange
         $client = $this->client;
+        $data = [
+            'id' => $client['id'],
+        ];
 
         // Act
-        $response = $this->getJson(route('client.find', ['id' => $client['id']]));
+        $response = $this->getJson(route('client.find', $data));
 
         // Assert
         $response->assertOk();

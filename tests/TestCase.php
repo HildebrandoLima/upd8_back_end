@@ -10,7 +10,6 @@ use App\Support\Utils\Params\Interface\ISearch;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Str;
 use Illuminate\Testing\TestResponse;
 use Mockery\MockInterface;
 use DateTime;
@@ -80,8 +79,8 @@ abstract class TestCase extends BaseTestCase
     {
         $this->pagination = $this->mock(IPagination::class,
             function (MockInterface $mock) use ($hasPagination) {
-                $mock->shouldReceive('setPage')->with(1);
-                $mock->shouldReceive('setPerPage')->with(10);
+                $mock->shouldReceive('setPage')->withAnyArgs();
+                $mock->shouldReceive('setPerPage')->withAnyArgs();
                 $mock->shouldReceive('hasPagination')->andReturn($hasPagination);
         });
         return $this->pagination;

@@ -4,6 +4,7 @@ namespace App\Http\Requests\Client;
 
 use App\Domain\Traits\ValidationPermission;
 use App\Http\Requests\BaseRequest;
+use App\Support\Utils\Messages\DefaultErrorMessages;
 
 class ClientRequest extends BaseRequest
 {
@@ -16,11 +17,17 @@ class ClientRequest extends BaseRequest
 
     public function rules(): array
     {
-        return [];
+        return [
+            'id' => 'required|int|exists:client,id',
+        ];
     }
 
     public function messages(): array
     {
-        return [];
+        return [
+            'client_id.exists' => DefaultErrorMessages::NOT_FOUND,
+            'client_id.required' => DefaultErrorMessages::REQUIRED_FIELD,
+            'client_id.int' => DefaultErrorMessages::FIELD_MUST_BE_INTEGER,
+        ];
     }
 }

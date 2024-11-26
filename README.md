@@ -68,7 +68,7 @@ Exploro o ecossistema do Framework Laravel, utilizando funcionalidades como Migr
 > DB_CONNECTION=mysql<br />
 > DB_HOST=localhost<br />
 > DB_PORT=3306<br />
-> DB_DATABASE=ms_delivery<br />
+> DB_DATABASE=upd8_dev<br />
 > DB_USERNAME=nome_do_usuario<br />
 > DB_PASSWORD=sua_senha<br />
 
